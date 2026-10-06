@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forno Vivo – Padaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <strong> Forno Vivo</strong>
+        <nav id="menu">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#encomenda">Encomendas</a></li>
+            </ul>
+        </nav>
+        <button id="menuBtn">☰</button>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1>Pão feito com calma</h1>
+            <p>Padaria de fermentação natural em São Paulo. Forno a lenha todo dia às 6h.</p>
+        </section>
+
+        <section id="cardapio">
+            <h2>Cardápio</h2>
+            <div class="filtros">
+                <button class="ativo" data-cat="todos">Todos</button>
+                <button data-cat="paes">Pães</button>
+                <button data-cat="doces">Doces</button>
+                <button data-cat="cafes">Cafés</button>
+            </div>
+            <input type="search" id="busca" placeholder="Buscar produto...">
+            <div class="grade" id="grade"></div>
+
+            <div id="carrinho">
+                <h3 Carrinho</h3>
+                <ul id="lista"></ul>
+                <p><strong>Total: <span id="total">R$ 0,00</span></strong></p>
+            </div>
+        </section>
+
+        <section id="encomenda">
+            <h2>Faça sua encomenda</h2>
+            <form id="form" novalidate>
+                <input type="text" id="nome" placeholder="Seu nome">
+                <span class="erro" id="erro-nome"></span>
+
+                <input type="email" id="email" placeholder="Seu e-mail">
+                <span class="erro" id="erro-email"></span>
+
+                <select id="turno">
+                    <option value="">Turno de retirada</option>
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                </select>
+                <span class="erro" id="erro-turno"></span>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="sucesso"></p>
+        </section>
+    </main>
+
+    <footer>© 2026 Forno Vivo – Rua do Trigo, 120, São Paulo/SP</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
